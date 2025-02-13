@@ -7,18 +7,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let cart = [];
 
-    // Toggle Cart Visibility
+    
     cartIcon.addEventListener("click", () => {
         cartDropdown.style.display = cartDropdown.style.display === "block" ? "none" : "block";
     });
 
-    // Add Items to Cart
+    
     document.querySelectorAll(".add-to-cart").forEach(button => {
         button.addEventListener("click", () => {
             const name = button.getAttribute("data-name");
             const price = parseFloat(button.getAttribute("data-price"));
 
-            // Check if item is already in cart
+            
             const existingItem = cart.find(item => item.name === name);
             if (existingItem) {
                 existingItem.quantity += 1;
